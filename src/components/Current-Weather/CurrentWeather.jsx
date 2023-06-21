@@ -25,7 +25,7 @@ const CurrentWeather = ({ data }) => {
             <span className="parameter-label top">Weather Information</span>
           </div>
           <div className="parameter-row">
-            <span className="parameter-label">Looks like</span>
+            <span className="parameter-label">Feels like</span>
             <span className="parameter-value">
               {Math.round(data.main.feels_like)}°C
             </span>

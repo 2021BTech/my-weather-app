@@ -32,13 +32,16 @@ const Search = ({ onSearchChange }) => {
   };
 
   return (
-    <AsyncPaginate
-      placeholder="Find Your City"
-      debounceTimeout={600}
-      value={search}
-      onChange={handleOnChange}
-      loadOptions={loadOptions}
-    />
+    <>
+      <h3> My Weather App</h3>
+      <AsyncPaginate
+        placeholder="Find Your City"
+        debounceTimeout={600}
+        value={search}
+        onChange={handleOnChange}
+        loadOptions={loadOptions}
+      />
+    </>
   );
 };
 

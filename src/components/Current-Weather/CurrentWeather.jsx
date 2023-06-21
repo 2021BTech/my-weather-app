@@ -1,9 +1,11 @@
 import React from "react";
+// styles
 import "./CurrentWeather.css";
 
 const CurrentWeather = ({ data }) => {
   return (
     <div className="weather">
+      {/* top section data */}
       <div className="top">
         <div>
           <p className="city">{data.city}</p>
@@ -15,6 +17,7 @@ const CurrentWeather = ({ data }) => {
           src={`icons/${data.weather[0].icon}.png`}
         />
       </div>
+      {/* bottom section */}
       <div className="bottom">
         <p className="temperature">{Math.round(data.main.temp)}°C</p>
         <div className="details">
@@ -22,7 +25,7 @@ const CurrentWeather = ({ data }) => {
             <span className="parameter-label top">Weather Information</span>
           </div>
           <div className="parameter-row">
-            <span className="parameter-label">Feels like</span>
+            <span className="parameter-label">Looks like</span>
             <span className="parameter-value">
               {Math.round(data.main.feels_like)}°C
             </span>

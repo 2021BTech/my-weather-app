@@ -1,4 +1,5 @@
 import React from "react";
+// Accordion data to use
 import {
   Accordion,
   AccordionItem,
@@ -8,6 +9,7 @@ import {
 } from "react-accessible-accordion";
 import "./forecast.css";
 
+// Data of week day
 const WEEK_DAYS = [
   "Monday",
   "Tuesday",
@@ -26,7 +28,8 @@ const Forecast = ({ data }) => {
 
   return (
     <>
-      <label className="title">Daily</label>
+      <label className="title"> Daily </label>
+      {/* Accordion data */}
       <Accordion allowZeroExpanded>
         {data.list.splice(0, 7).map((item, idx) => (
           <AccordionItem key={idx}>
@@ -50,6 +53,7 @@ const Forecast = ({ data }) => {
               </AccordionItemButton>
             </AccordionItemHeading>
             <AccordionItemPanel>
+              {/* Additional detail section */}
               <div className="daily-details-grid">
                 <div className="daily-details-grid-item">
                   <label>Pressure:</label>

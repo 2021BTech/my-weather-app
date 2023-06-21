@@ -1,11 +1,14 @@
 import { useState } from "react";
+// components
 import Search from "./components/Search/Search";
 import CurrentWeather from "./components/Current-Weather/CurrentWeather";
 import Forecast from "./components/Forcast/Forecast";
 import { WEATHER_API_URL, WEATHER_API_KEY } from "./api";
+// styles
 import "./App.css";
 
 function App() {
+  // state management
   const [currentWeather, setCurrentWeather] = useState(null);
   const [forecast, setForecast] = useState(null);
 
